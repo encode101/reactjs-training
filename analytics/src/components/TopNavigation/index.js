@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import LocationSearch from '../../components/LocationSearch'
+import SearchBox from '../../components/SearchBox'
 
 class TopNav extends Component {
     static propTypes = {
@@ -8,6 +8,9 @@ class TopNav extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            "searchItem": "australia"
+        }
     }
 
     render() {
@@ -21,7 +24,12 @@ class TopNav extends Component {
                         <li className="breadcrumb-item">Profile</li>
                     </ol>
             	</nav>
-                <LocationSearch></LocationSearch>
+                <SearchBox 
+                    searchItem={this.state.searchItem}
+                    name="locatioNSearchBox"
+                    onClick="alert('here')"
+                    >
+                </SearchBox>
             </div>
         );
     }
