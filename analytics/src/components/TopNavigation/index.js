@@ -1,4 +1,5 @@
 import React, { Component} from 'react';
+import LocationSearch from '../../components/LocationSearch'
 
 class TopNav extends Component {
     static propTypes = {
@@ -12,11 +13,15 @@ class TopNav extends Component {
     render() {
         return (
             <div>
-            	<ul>
-            		<li>Dashboard</li>
-            		<li>Reports</li>
-            		<li>Profile</li>
-            	</ul>
+                <div className="verticalSpacing50"></div>
+            	<nav id="topnav" className="topNav">
+            		<ol className='breadcrumb'>
+                        <li className="breadcrumb-item active">Dashboard</li>
+                        <li className="breadcrumb-item">Reports</li>
+                        <li className="breadcrumb-item">Profile</li>
+                    </ol>
+            	</nav>
+                <LocationSearch></LocationSearch>
             </div>
         );
     }
