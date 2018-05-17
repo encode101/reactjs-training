@@ -4,23 +4,26 @@ class SearchBox extends Component {
 
     constructor(props) {
         super(props);
-       // this.handleChange = this.bind.handleChange
+        this.state = {
+            searchItem: this.props.searchItem
+        }
+       this.handleChange = this.handleChange.bind(this)
 
     }
 
-    handleChange(){
-        alert("Values Changed!");
+    handleChange(ev){
+        this.setState({searchItem: ev.target.value})
     }
 
     handleClick(){
-        alert("Clicked!")
+         // alert("Clicked!")
     }
 
     render() {
         return (
             <div className="float-right">
             	<form className="form-inline">
-            	   <input type="text" name={this.props.name}  className="form-control" value={this.props.searchItem} onChange={this.handleChange} />&nbsp;
+            	   <input type="text" name={this.props.name}  className="form-control" value= {this.state.searchItem} onChange={this.handleChange} />&nbsp;
             	   <input type="button" value="Search" className="btn btn-info" onClick={this.handleClick()}  />
             	</form>
             </div>

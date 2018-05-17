@@ -9,8 +9,10 @@ class TopNav extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            "searchItem": "australia"
+            "searchItem": "australia",
+            "screen": "intro"
         }
+       // this.handleClick = this.handleClick.bind(this);
     }
 
     render() {
@@ -19,8 +21,8 @@ class TopNav extends Component {
                 <div className="verticalSpacing50"></div>
             	<nav id="topnav" className="topNav">
             		<ol className='breadcrumb'>
-                        <li className="breadcrumb-item active">Dashboard</li>
-                        <li className="breadcrumb-item">Reports</li>
+                        <li className="breadcrumb-item active">introduction</li>
+                        <li className="breadcrumb-item">Setup Subscription</li>
                         <li className="breadcrumb-item">Profile</li>
                     </ol>
             	</nav>

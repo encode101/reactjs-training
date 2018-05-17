@@ -1,4 +1,7 @@
+.clearfix{clear: both;}
 .verticalSpacing50{clear:both; height: 50px;}
 .topNav ol{background: teal!important;}
 .topNav ol li{color: #EEE!important;}
 .topNav ol .active{color: #FFF!important;}
+.customRadio{border:2px solid #000;}
+.contentArea{min-height:300px; margin: 30px 0; border-top: 1px solid #EEE; padding:30px 0px;}
